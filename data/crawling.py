@@ -1,35 +1,76 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
+import time
+
 
 class Crawling:
     def __init__(self):
         self.url = "https://fruitsfamily.com/discover"
-        self.driver = webdriver.Chrome()
+        self.user_agent = {"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+        self.options = Options()
+        self.set_options()
+        self.driver = webdriver.Chrome(options=self.options)
         self.driver.get(self.url)
-        self.item_links = []
 
-    def extract_item_link(self) -> list:
+    def set_options(self):
+        self.options.add_argument(f"user-agent={self.user_agent}")
+        self.options.add_argument('incognito')
+        # self.options.add_argument('--headless')
+
+    # def extract_items(self) -> list:
+    #     datas = self.driver.find_elements(By.CLASS_NAME, "CardDeck-item")
+    #     items = []
+    #     for i in datas:
+    #         items.append(i.find_element(By.CLASS_NAME, "ProductsListItem"))
+    #     time.sleep(1)
+    #     return items
+    def extract_item_links(self) -> list:
         datas = self.driver.find_elements(By.CLASS_NAME, "CardDeck-item")
         item_links = []
         for i in datas:
             item = i.find_element(By.CLASS_NAME, "ProductPreview")
-            self.item_links.append(item.get_attribute("href"))
+            link = item.get_attribute("href")
+            item_links.append(link)
+            # item_links.append(i.find_element(By.CLASS_NAME, "ProductsListItem"))
         return item_links
 
+    def extract_item_infos(self, item_links: list) -> list:
+        items_info = []
+        for link in item_links[:5]:
+            self.driver.get(link)
+            category = self.extract_item_category()
+            brand = self.extract_item_brand()
+            product = self.extract_item_product()
+            price = self.extract_item_price()
+            items_info.append((link, category, brand, product, price))
+            time.sleep(0.5)
+        return items_info
 
-    def extract_item_infos(self, item_links: list) -> tuple:
-        for i in item_links:
-            category = self.driver.find_element()
-            brand = self.driver.find_element()
-            product = self.driver.find_element()
-            price = self.driver.find_element()
-        return category, brand, product, price
+    def extract_item_category(self) -> str:
+        # category = self.driver.find_element(By.CLASS_NAME, "Product-tag").text
+        category = self.driver.find_elements(By.CLASS_NAME, "Product-tag")[0].text
+        return category
+
+    def extract_item_brand(self) -> str:
+        # brand = self.driver.find_element(By.CLASS_NAME, "ProductsListItem-brand ").text
+        brand = self.driver.find_elements(By.CLASS_NAME, "Product-tag")[1].text
+        return brand
+
+    def extract_item_product(self) -> str:
+        # product = self.driver.find_element(By.CLASS_NAME, "ProductsListItem-title").text
+        product = self.driver.find_element(By.CLASS_NAME, "Product-title").text
+        return product
+
+    def extract_item_price(self) -> str:
+        # price = self.driver.find_element(By.CLASS_NAME, "ProductsListItem-price").text
+        price = self.driver.find_element(By.CLASS_NAME, "Product-price").text
+        return price
 
     def crawl(self):
-        item_links = self.extract_item_link()
-        item_infos = self.extract_item_infos(item_links)
-
+        item_links = self.extract_item_links()
+        items_info = self.extract_item_infos(item_links)
+        print(items_info)
 
     def stop(self):
         self.driver.close()

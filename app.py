@@ -9,14 +9,15 @@ class Application:
     def run(self):
         if self.__running:
             crawling = Crawling()
-            try:
-                crawling.crawl()
-                # db()
-                # display()
-            except:
-                ConsoleWriter().print_error()
-            finally:
-                crawling.stop()
+            crawling.crawl()
+            # try:
+            #     # crawling.crawl()
+            #     # db()
+            #     # display()
+            # except:
+            #     ConsoleWriter().print_error()
+            # finally:
+            #     crawling.stop()
 
 
 if __name__ == "__main__":
