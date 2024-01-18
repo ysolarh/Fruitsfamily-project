@@ -49,7 +49,7 @@ class Crawling:
 
     def extract_item_infos(self, item_links: list) -> list:
         items_info = []
-        for link in item_links:
+        for link in item_links[:5]:  #
             self.driver.get(link)
             category = self.extract_item_category()
             brand = self.extract_item_brand()
@@ -79,11 +79,12 @@ class Crawling:
         price = self.driver.find_element(By.CLASS_NAME, "Product-price").text
         return price
 
-    def crawl(self):
-        self.scroll()
+    def crawl(self) -> list:
+        # self.scroll()
         item_links = self.extract_item_links()
-        items_info = self.extract_item_infos(item_links)
-        print(items_info)
+        item_infos = self.extract_item_infos(item_links)
+        print(item_infos)
+        return item_infos
 
     def stop(self):
         self.driver.close()
