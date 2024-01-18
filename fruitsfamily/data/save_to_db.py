@@ -15,27 +15,29 @@ class FruitsDB:
 
     def create_tables(self, cur):
         cur.execute("""
-            CREATE TABLE IF NOT EXISTS Items (
-                item_id INT NOT NULL AUTO INCREMENT,
-                category_id INT,
-                brand_id INT,
-                price INT NOT NULL,
-                url TEXT,
-                PRIMARY KEY (item_id)
-                FOREIGN KEY (category_id) REFERENCES Categories (category_id),
-                FOREIGN KEY (brand_id) REFERENCES Brands (brand_id)
-            );
-        """)
-        cur.execute("""
             CREATE TABLE IF NOT EXISTS Categories (
-                category_id INT NOT NULL AUTO INCREMENT,
-                name VARCHAR(10) NOT NULL
+                category_id INT NOT NULL AUTO_INCREMENT,
+                name VARCHAR(10) NOT NULL,
+                PRIMARY KEY (category_id)
             );
         """)
         cur.execute("""
             CREATE TABLE IF NOT EXISTS Brands (
-                brand_id INT NOT NULL AUTO_INCREMENT
-                brand_name VARCHAR(50) NOT NULL
+                brand_id INT NOT NULL AUTO_INCREMENT,
+                brand_name VARCHAR(50) NOT NULL,
+                Primary KEY (brand_id)
+            );
+        """)
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS Items (
+                item_id INT NOT NULL AUTO_INCREMENT,
+                category_id INT,
+                brand_id INT,
+                price INT NOT NULL,
+                url TEXT,
+                PRIMARY KEY (item_id),
+                FOREIGN KEY (category_id) REFERENCES Categories (category_id),
+                FOREIGN KEY (brand_id) REFERENCES Brands (brand_id)
             );
         """)
 
