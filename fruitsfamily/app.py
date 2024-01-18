@@ -1,10 +1,11 @@
 from data.crawling import Crawling
 from console.console_writer import ConsoleWriter
-
+# from utils.file_utils import FileUtils
 
 class Application:
     def __init__(self):
         self.__running = True
+        # FileUtils.set_path()
 
     def run(self):
         if self.__running:
@@ -15,7 +16,7 @@ class Application:
             #     # db()
             #     # display()
             # except:
-            #     ConsoleWriter().print_error()
+            #     ConsoleWriter.print_error()
             # finally:
             #     crawling.stop()
 
