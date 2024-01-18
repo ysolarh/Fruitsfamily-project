@@ -22,7 +22,7 @@ class Application:
 
             # try:
             FruitsDB().save(self.datas)
-            # except:
+            # except raise_mysql_exception:
             #     ConsoleWriter.print_error()
 
 
