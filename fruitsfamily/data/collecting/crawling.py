@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
+from console.console_writer import ConsoleWriter
 from config.constants import (FRUITS_URL, SLEEP_TIME, SCROLL_PAUSE_TIME)
 
 
@@ -41,7 +42,7 @@ class Crawling:
 
     def extract_item_infos(self, item_links: list) -> list:
         items_info = []
-        for link in item_links[:5]:  #
+        for link in item_links[:5]:  # debug
             self.driver.get(link)
             category = self.extract_item_category()
             brand = self.extract_item_brand()
@@ -68,11 +69,16 @@ class Crawling:
         return price
 
     def crawl(self) -> list:
-        # self.scroll()
-        item_links = self.extract_item_links()
-        item_infos = self.extract_item_infos(item_links)
-        print(item_infos) # debug
-        return item_infos
+        try:
+            # self.scroll()
+            item_links = self.extract_item_links()
+            item_infos = self.extract_item_infos(item_links)
+            print(item_infos) # debug
+            return item_infos
+        except Exception as e: # fix
+            ConsoleWriter.print_error(e)
+        finally:
+            self.close_driver()
 
-    def stop(self):
+    def close_driver(self):
         self.driver.close()
