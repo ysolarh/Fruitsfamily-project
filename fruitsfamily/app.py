@@ -11,6 +11,7 @@ class Application:
     def run(self):
         if self.__running:
             crawling = Crawling()
+            fruits_db = FruitsDB()
             try:
                 self.datas = crawling.crawl()
                 # display()
@@ -19,7 +20,10 @@ class Application:
             finally:
                 crawling.stop()
 
-            FruitsDB().save(self.datas)
+            try:
+                fruits_db.save_db(self.datas)
+            finally:
+                fruits_db.close_db()
 
 
 if __name__ == "__main__":

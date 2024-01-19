@@ -88,7 +88,10 @@ class FruitsDB:
             self.insert_items(cur, data)
             self.conn.commit()
 
-    def save(self, data_list):
+    def save_db(self, data_list):
         with self.conn.cursor() as cur:
             self.create_tables(cur)
             self.insert_datas(cur, data_list)
+
+    def close_db(self):
+        self.conn.close()
