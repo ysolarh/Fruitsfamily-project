@@ -49,7 +49,8 @@ class Crawling:
             brand = self.extract_item_brand()
             product = self.extract_item_product()
             price = self.extract_item_price()
-            items_info.append((link, category, brand, product, price))
+            is_sold = self.extract_is_sold()
+            items_info.append((link, category, brand, product, price, is_sold))
             time.sleep(SLEEP_TIME)
         return items_info
 
@@ -68,6 +69,13 @@ class Crawling:
     def extract_item_price(self) -> str:
         price = self.driver.find_element(By.CLASS_NAME, "Product-price").text
         return price
+
+    def extract_is_sold(self) -> int:
+        is_sold = self.driver.find_element(By.CLASS_NAME, "Product-buy").text
+        if is_sold == '품절':
+            return 1
+        else:
+            return 0
 
     def crawl(self) -> list:
         try:
