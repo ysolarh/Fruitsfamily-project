@@ -2,3 +2,5 @@
 .vscode/
 *__pycache__*
 constants_db.py
+*test*
+*temp*
