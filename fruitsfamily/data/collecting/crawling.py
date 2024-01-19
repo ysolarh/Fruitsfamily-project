@@ -19,7 +19,7 @@ class Crawling:
     def set_options(self) -> None:
         self.options.add_argument(f"user-agent={self.user_agent}")
         self.options.add_argument('incognito')
-        self.options.add_argument('--headless')
+        # self.options.add_argument('--headless')
 
     def scroll(self) -> None:
         last_height = self.driver.execute_script("return document.body.scrollHeight")
@@ -42,7 +42,8 @@ class Crawling:
 
     def extract_item_infos(self, item_links: list) -> list:
         items_info = []
-        for link in item_links[:5]:  # debug
+        # for link in item_links[:5]:  # debug
+        for link in item_links:
             self.driver.get(link)
             category = self.extract_item_category()
             brand = self.extract_item_brand()
@@ -70,7 +71,7 @@ class Crawling:
 
     def crawl(self) -> list:
         try:
-            # self.scroll()
+            self.scroll()
             item_links = self.extract_item_links()
             item_infos = self.extract_item_infos(item_links)
             print(item_infos) # debug
