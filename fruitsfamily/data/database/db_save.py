@@ -9,7 +9,7 @@ class FruitsDB:
     def __init__(self):
         self.db_module = DatabaseModule()
 
-    def create_table_cates(self) -> None:
+    def create_table_categories(self) -> None:
         sql_create_cate = """
             CREATE TABLE IF NOT EXISTS Categories (
                 category_id INT NOT NULL AUTO_INCREMENT,
@@ -46,19 +46,19 @@ class FruitsDB:
         self.db_module.execute(sql_create_item)
 
     def create_tables(self) -> None:
-        self.create_table_cates()
+        self.create_table_categories()
         self.create_table_brands()
         self.create_table_items()
 
     def insert_categories(self, data: tuple) -> None:
-        sql_cate = "INSERT INTO Categories (name) VALUES (%s)"
+        sql_cate = "INSERT INTO Categories (name) VALUES (%s);"
         try:
             self.db_module.execute(sql_cate, data[CATE_IDX])
         except IntegrityError as e:
             ConsoleWriter.print_error(e)
 
     def insert_brands(self, data: tuple) -> None:
-        sql_brand = "INSERT INTO Brands (brand_name) VALUES (%s)"
+        sql_brand = "INSERT INTO Brands (brand_name) VALUES (%s);"
         try:
             self.db_module.execute(sql_brand, data[BRAND_IDX])
         except IntegrityError as e:
@@ -70,7 +70,7 @@ class FruitsDB:
                     (SELECT category_id FROM Categories WHERE name = %s),
                     (SELECT brand_id FROM Brands WHERE brand_name = %s),
                     %s, %s, %s
-                )"""
+                );"""
         try:
             self.db_module.execute(sql_item, (data[CATE_IDX], data[BRAND_IDX], data[PROD_IDX], data[PRICE_IDX][:-1], data[URL_IDX]))
         except IntegrityError as e:
