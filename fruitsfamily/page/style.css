@@ -48,6 +48,12 @@ form {
   border: none;
   box-shadow: 0 0 0 3px var(--color3);
   font-weight: 300;
+  /* -moz-appearance: none; */
+  /* -webkit-appearance: none; */
+  /* appearance: none; */
+}
+.form-select option {
+  color: #4942e4;
 }
 .form-input {
   width: 170px;

@@ -19,7 +19,7 @@ class Crawling:
     def set_options(self) -> None:
         self.options.add_argument(f"user-agent={self.user_agent}")
         self.options.add_argument('incognito')
-        # self.options.add_argument('--headless')
+        self.options.add_argument('--headless')
 
     def scroll(self) -> None:
         last_height = self.driver.execute_script("return document.body.scrollHeight")

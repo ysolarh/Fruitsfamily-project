@@ -20,7 +20,8 @@ class DatabaseModule:
         self.conn.commit()
 
     def execute(self, query: str, *args: tuple) -> None:
-        self.cur.execute(query, args or ()) # fix
+        # self.cur.execute(query, args or ()) # fix
+        self.cur.execute(query, *args)
 
     def executeOne(self, query, *args: tuple) -> tuple:
         self.cur.execute(query, *args)
