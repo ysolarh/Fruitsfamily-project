@@ -28,7 +28,7 @@ class DatabaseModule:
         row = self.cur.fetchone()
         return row
 
-    def excuteAll(self, query, *args: tuple) -> tuple:
+    def executeAll(self, query, *args: tuple) -> tuple:
         self.cur.execute(query, *args)
         rows = self.cur.fetchall()
         return rows
