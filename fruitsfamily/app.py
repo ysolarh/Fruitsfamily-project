@@ -1,7 +1,7 @@
 from data.collecting.crawling import Crawling
 from data.database.db_save import FruitsDB
 
-# from display.graph import ShowGraph
+# from analysis.graph import ShowGraph
 
 class Application:
     def __init__(self):

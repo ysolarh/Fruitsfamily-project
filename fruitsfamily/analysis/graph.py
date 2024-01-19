@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 
 # import sys
 
-# sys.path.append(r'fruitsfamily/display/db_analysis.py')
-from display.db_analysis import DBAnalysis
+# sys.path.append(r'fruitsfamily/analysis/db_analysis.py')
+from analysis.db_analysis import DBAnalysis
 # import matplotlib.font_manager as fm
 
 

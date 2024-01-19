@@ -73,7 +73,8 @@ class FruitsDB:
                     %s, %s, %s, %s
                 );"""
         try:
-            self.db_module.execute(sql_item, (data[CATE_IDX], data[BRAND_IDX], data[PROD_IDX], data[PRICE_IDX][:-1], data[URL_IDX], data[SOLD_IDX]))
+            price = int(data[PRICE_IDX][:-1].replace(",", ""))
+            self.db_module.execute(sql_item, (data[CATE_IDX], data[BRAND_IDX], data[PROD_IDX], price, data[URL_IDX], data[SOLD_IDX]))
         except IntegrityError as e:
             ConsoleWriter.print_error(e)
 
