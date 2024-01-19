@@ -20,10 +20,7 @@ class Application:
             finally:
                 crawling.stop()
 
-            # try:
             FruitsDB().save(self.datas)
-            # except raise_mysql_exception:
-            #     ConsoleWriter.print_error()
 
 
 if __name__ == "__main__":
