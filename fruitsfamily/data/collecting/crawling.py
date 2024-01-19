@@ -31,6 +31,7 @@ class Crawling:
                 break
             last_height = new_height
 
+
     def extract_item_links(self) -> list:
         datas = self.driver.find_elements(By.CLASS_NAME, "CardDeck-item")
         item_links = []
@@ -43,7 +44,7 @@ class Crawling:
     def extract_item_infos(self, item_links: list) -> list:
         items_info = []
         # for link in item_links[:5]:  # debug
-        for link in item_links:
+        for link in item_links[:5]:
             self.driver.get(link)
             category = self.extract_item_category()
             brand = self.extract_item_brand()
@@ -79,7 +80,7 @@ class Crawling:
 
     def crawl(self) -> list:
         try:
-            self.scroll()
+            # self.scroll()
             item_links = self.extract_item_links()
             item_infos = self.extract_item_infos(item_links)
             print(item_infos) # debug

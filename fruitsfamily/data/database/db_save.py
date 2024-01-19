@@ -2,7 +2,7 @@ import pymysql
 from pymysql import IntegrityError
 from console.console_writer import ConsoleWriter
 from data.database.db_module import DatabaseModule
-from config.constants import (URL_IDX, CATE_IDX, BRAND_IDX, PROD_IDX, PRICE_IDX, STOCK_IDX)
+from config.constants import (URL_IDX, CATE_IDX, BRAND_IDX, PROD_IDX, PRICE_IDX, SOLD_IDX)
 
 
 class FruitsDB:
@@ -38,7 +38,7 @@ class FruitsDB:
                 product VARCHAR(100) NOT NULL UNIQUE,
                 price VARCHAR(10) NOT NULL,
                 url TEXT,
-                stock BOOLEAN,
+                sold BOOLEAN,
                 PRIMARY KEY (item_id),
                 FOREIGN KEY (category_id) REFERENCES Categories (category_id) ON DELETE CASCADE,
                 FOREIGN KEY (brand_id) REFERENCES Brands (brand_id) ON DELETE CASCADE
@@ -67,13 +67,13 @@ class FruitsDB:
 
     def insert_items(self, data: tuple) -> None:
         sql_item = """
-                INSERT INTO Items (category_id, brand_id, product, price, url, stock) VALUES (
+                INSERT INTO Items (category_id, brand_id, product, price, url, sold) VALUES (
                     (SELECT category_id FROM Categories WHERE name = %s),
                     (SELECT brand_id FROM Brands WHERE brand_name = %s),
                     %s, %s, %s, %s
                 );"""
         try:
-            self.db_module.execute(sql_item, (data[CATE_IDX], data[BRAND_IDX], data[PROD_IDX], data[PRICE_IDX][:-1], data[URL_IDX], data[STOCK_IDX]))
+            self.db_module.execute(sql_item, (data[CATE_IDX], data[BRAND_IDX], data[PROD_IDX], data[PRICE_IDX][:-1], data[URL_IDX], data[SOLD_IDX]))
         except IntegrityError as e:
             ConsoleWriter.print_error(e)
 
