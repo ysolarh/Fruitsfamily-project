@@ -14,6 +14,10 @@ const data = [
   // ...
 ];
 
+const base_url = "https://fruitsfamily.com/";
+const category_url = base_url + "discover/product/";
+const brand_url = base_url + "brand/";
+
 const dateH3 = document.querySelector(".date");
 const dataTable = document.getElementById("data-table");
 
@@ -24,8 +28,8 @@ dateH3.innerHTML = `${today.getFullYear()}
 data.forEach((item) => {
   const row = dataTable.insertRow();
   row.insertCell(0).innerHTML = "<input type='checkbox'>";
-  row.insertCell(1).innerHTML = item.category;
-  row.insertCell(2).innerHTML = item.brand;
+  row.insertCell(1).innerHTML = `<a href=${category_url + item.category} target='_blank'>${item.category}</a>`;
+  row.insertCell(2).innerHTML = `<a href=${brand_url + item.brand} target='_blank'>${item.brand}</a>`;
   row.insertCell(3).innerHTML = `<a href=${item.link} target='_blank'>${item.product}</a>`;
   row.insertCell(4).innerHTML = item.price;
 });
