@@ -13,11 +13,11 @@ class DatabaseModule:
         )
         self.cur = self.conn.cursor()
 
-    def close_db(self):
+    def close_db(self) -> None:
         self.conn.close()
 
-    def commit(self):
+    def commit(self) -> None:
         self.conn.commit()
 
-    def execute(self, query, *args):
+    def execute(self, query: str, *args: tuple) -> None:
         self.cur.execute(query, *args)

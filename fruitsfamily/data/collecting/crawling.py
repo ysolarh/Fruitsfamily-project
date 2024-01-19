@@ -16,12 +16,12 @@ class Crawling:
         self.driver = webdriver.Chrome(options=self.options)
         self.driver.get(self.url)
 
-    def set_options(self):
+    def set_options(self) -> None:
         self.options.add_argument(f"user-agent={self.user_agent}")
         self.options.add_argument('incognito')
         # self.options.add_argument('--headless')
 
-    def scroll(self):
+    def scroll(self) -> None:
         last_height = self.driver.execute_script("return document.body.scrollHeight")
         while True:
             self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -80,5 +80,5 @@ class Crawling:
         finally:
             self.close_driver()
 
-    def close_driver(self):
+    def close_driver(self) -> None:
         self.driver.close()
