@@ -130,6 +130,11 @@ input[type="checkbox"] {
   cursor: pointer;
   accent-color: var(--color1);
 }
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
 .footer {
   display: flex;
   justify-content: space-between;
