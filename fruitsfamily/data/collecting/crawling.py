@@ -21,16 +21,28 @@ class Crawling:
         self.options.add_argument('incognito')
         # self.options.add_argument('--headless')
 
-    def scroll(self) -> None:
-        last_height = self.driver.execute_script("return document.body.scrollHeight")
+    def get_scroll_height(self) -> int:
+        return self.driver.execute_script("return document.body.scrollHeight")
+
+    def scroll_one(self) -> None:
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    def scroll_all(self) -> None:
+        last_height = self.get_scroll_height()
         while True:
-            self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            self.scroll_one()
             time.sleep(SCROLL_PAUSE_TIME)
-            new_height = self.driver.execute_script("return document.body.scrollHeight")
+            new_height = self.get_scroll_height()
             if new_height == last_height:
                 break
             last_height = new_height
 
+    def scroll_n_times(self, n: int) -> None:
+        i = 0
+        while i < n:
+            self.scroll_one()
+            time.sleep(SCROLL_PAUSE_TIME)
+            i += 1
 
     def extract_item_links(self) -> list:
         datas = self.driver.find_elements(By.CLASS_NAME, "CardDeck-item")
@@ -80,7 +92,7 @@ class Crawling:
 
     def crawl(self) -> list:
         try:
-            # self.scroll()
+            self.scroll_n_times(0) # debug
             item_links = self.extract_item_links()
             item_infos = self.extract_item_infos(item_links)
             print(item_infos) # debug
