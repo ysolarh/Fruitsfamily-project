@@ -1,3 +1,5 @@
+from typing import Tuple, Any
+
 import pymysql
 from config.constants_db import (HOST, USER, PASSWORD, DB, CHARSET)
 
@@ -23,12 +25,12 @@ class DatabaseModule:
         # self.cur.execute(query, args or ()) # fix
         self.cur.execute(query, *args)
 
-    def executeOne(self, query, *args: tuple) -> tuple:
+    def execute_one(self, query, *args: tuple) -> dict:
         self.cur.execute(query, *args)
         row = self.cur.fetchone()
         return row
 
-    def executeAll(self, query, *args: tuple) -> tuple:
+    def execute_all(self, query, *args: tuple) -> tuple:
         self.cur.execute(query, *args)
         rows = self.cur.fetchall()
         return rows
