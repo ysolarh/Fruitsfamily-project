@@ -1,22 +1,15 @@
 import pymysql
 from pymysql import IntegrityError
 from console.console_writer import ConsoleWriter
-from config.constants_db import (HOST, USER, PASSWORD, DB, CHARSET)
+from data.database.db_module import DatabaseModule
 from config.constants import (URL_IDX, CATE_IDX, BRAND_IDX, PROD_IDX, PRICE_IDX)
 
 
 class FruitsDB:
     def __init__(self):
-        self.conn = pymysql.connect(
-            host=HOST,
-            user=USER,
-            password=PASSWORD,
-            db=DB,
-            charset=CHARSET,
-            cursorclass=pymysql.cursors.DictCursor
-        )
+        self.db_module = DatabaseModule()
 
-    def create_table_cates(self, cur):
+    def create_table_cates(self):
         sql_create_cate = """
             CREATE TABLE IF NOT EXISTS Categories (
                 category_id INT NOT NULL AUTO_INCREMENT,
@@ -24,9 +17,9 @@ class FruitsDB:
                 PRIMARY KEY (category_id)
             );
         """
-        cur.execute(sql_create_cate)
+        self.db_module.execute(sql_create_cate)
 
-    def create_table_brands(self, cur):
+    def create_table_brands(self):
         sql_create_brand = """
             CREATE TABLE IF NOT EXISTS Brands (
                 brand_id INT NOT NULL AUTO_INCREMENT,
@@ -34,15 +27,15 @@ class FruitsDB:
                 Primary KEY (brand_id)
             );
         """
-        cur.execute(sql_create_brand)
+        self.db_module.execute(sql_create_brand)
 
-    def create_table_items(self, cur):
+    def create_table_items(self):
         sql_create_item = """
             CREATE TABLE IF NOT EXISTS Items (
                 item_id INT NOT NULL AUTO_INCREMENT,
                 category_id INT,
                 brand_id INT,
-                product VARCHAR(100) NOT NULL,
+                product VARCHAR(100) NOT NULL UNIQUE,
                 price VARCHAR(10) NOT NULL,
                 url TEXT,
                 PRIMARY KEY (item_id),
@@ -50,48 +43,52 @@ class FruitsDB:
                 FOREIGN KEY (brand_id) REFERENCES Brands (brand_id) ON DELETE CASCADE
             );
         """
-        cur.execute(sql_create_item)
+        self.db_module.execute(sql_create_item)
 
-    def create_tables(self, cur):
-        self.create_table_cates(cur)
-        self.create_table_brands(cur)
-        self.create_table_items(cur)
+    def create_tables(self):
+        self.create_table_cates()
+        self.create_table_brands()
+        self.create_table_items()
 
-    def insert_cates(self, cur, data):
+    def insert_categories(self, data):
         sql_cate = "INSERT INTO Categories (name) VALUES (%s)"
         try:
-            cur.execute(sql_cate, data[CATE_IDX])
+            self.db_module.execute(sql_cate, data[CATE_IDX])
         except IntegrityError as e:
             ConsoleWriter.print_error(e)
 
-    def insert_brands(self, cur, data):
+    def insert_brands(self, data):
         sql_brand = "INSERT INTO Brands (brand_name) VALUES (%s)"
         try:
-            cur.execute(sql_brand, data[BRAND_IDX])
+            self.db_module.execute(sql_brand, data[BRAND_IDX])
         except IntegrityError as e:
             ConsoleWriter.print_error(e)
 
-    def insert_items(self, cur, data):
+    def insert_items(self, data):
         sql_item = """
                 INSERT INTO Items (category_id, brand_id, product, price, url) VALUES (
                     (SELECT category_id FROM Categories WHERE name = %s),
                     (SELECT brand_id FROM Brands WHERE brand_name = %s),
                     %s, %s, %s
                 )"""
-        cur.execute(sql_item, (data[CATE_IDX], data[BRAND_IDX], data[PROD_IDX], data[PRICE_IDX][:-1], data[URL_IDX]))
+        try:
+            self.db_module.execute(sql_item, (data[CATE_IDX], data[BRAND_IDX], data[PROD_IDX], data[PRICE_IDX][:-1], data[URL_IDX]))
+        except IntegrityError as e:
+            ConsoleWriter.print_error(e)
 
-    def insert_datas(self, cur, data_list):
+    def insert_datas(self, data_list):
         for data in data_list:
-            self.insert_cates(cur, data)
-            self.insert_brands(cur, data)
-            self.conn.commit()
-            self.insert_items(cur, data)
-            self.conn.commit()
+            self.insert_categories(data)
+            self.insert_brands(data)
+            self.db_module.commit()
+            self.insert_items(data)
+            self.db_module.commit()
 
     def save_db(self, data_list):
-        with self.conn.cursor() as cur:
-            self.create_tables(cur)
-            self.insert_datas(cur, data_list)
-
-    def close_db(self):
-        self.conn.close()
+        try:
+            self.create_tables()
+            self.insert_datas(data_list)
+        except Exception as e: # fix
+            ConsoleWriter.print_error(e)
+        finally:
+            self.db_module.close_db()

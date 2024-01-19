@@ -1,6 +1,5 @@
-from data.crawling import Crawling
-from console.console_writer import ConsoleWriter
-from data.save_to_db import FruitsDB
+from data.collecting.crawling import Crawling
+from data.database.db_save import FruitsDB
 
 
 class Application:
@@ -12,17 +11,8 @@ class Application:
         if self.__running:
             crawling = Crawling()
             fruits_db = FruitsDB()
-            try:
-                self.datas = crawling.crawl()
-            except:
-                ConsoleWriter.print_error()
-            finally:
-                crawling.stop()
-
-            try:
-                fruits_db.save_db(self.datas)
-            finally:
-                fruits_db.close_db()
+            self.datas = crawling.crawl()
+            fruits_db.save_db(self.datas)
 
 
 if __name__ == "__main__":
