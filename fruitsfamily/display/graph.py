@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # sys.path.append(r'fruitsfamily/display/db_analysis.py')
 from display.db_analysis import DBAnalysis
-import matplotlib.font_manager as fm
+# import matplotlib.font_manager as fm
 
 
 class ShowGraph:
@@ -29,10 +29,4 @@ class ShowGraph:
 
 
 # print([f.name for f in fm.fontManager.ttflist])
-ShowGraph().show_by_category()  # debug
-cate = ['상의', '하의', '아우터']
-x = np.arange(3)
-plt.bar(x, [1, 4, 9])
-# plt.xticks(x, labels=['a', 'b', 'c'])
-plt.xticks(x, label=cate)
-# plt.show()
+# ShowGraph().show_by_category()  # debug
