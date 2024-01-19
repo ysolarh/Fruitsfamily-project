@@ -20,4 +20,14 @@ class DatabaseModule:
         self.conn.commit()
 
     def execute(self, query: str, *args: tuple) -> None:
+        self.cur.execute(query, args or ()) # fix
+
+    def executeOne(self, query, *args: tuple) -> tuple:
         self.cur.execute(query, *args)
+        row = self.cur.fetchone()
+        return row
+
+    def excuteAll(self, query, *args: tuple) -> tuple:
+        self.cur.execute(query, *args)
+        rows = self.cur.fetchall()
+        return rows
