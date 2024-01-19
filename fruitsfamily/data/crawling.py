@@ -30,13 +30,6 @@ class Crawling:
                 break
             last_height = new_height
 
-    # def extract_items(self) -> list:
-    #     datas = self.driver.find_elements(By.CLASS_NAME, "CardDeck-item")
-    #     items = []
-    #     for i in datas:
-    #         items.append(i.find_element(By.CLASS_NAME, "ProductsListItem"))
-    #     time.sleep(1)
-    #     return items
     def extract_item_links(self) -> list:
         datas = self.driver.find_elements(By.CLASS_NAME, "CardDeck-item")
         item_links = []
@@ -44,7 +37,6 @@ class Crawling:
             item = i.find_element(By.CLASS_NAME, "ProductPreview")
             link = item.get_attribute("href")
             item_links.append(link)
-            # item_links.append(i.find_element(By.CLASS_NAME, "ProductsListItem"))
         return item_links
 
     def extract_item_infos(self, item_links: list) -> list:
@@ -60,22 +52,18 @@ class Crawling:
         return items_info
 
     def extract_item_category(self) -> str:
-        # category = self.driver.find_element(By.CLASS_NAME, "Product-tag").text
         category = self.driver.find_elements(By.CLASS_NAME, "Product-tag")[0].text
         return category
 
     def extract_item_brand(self) -> str:
-        # brand = self.driver.find_element(By.CLASS_NAME, "ProductsListItem-brand ").text
         brand = self.driver.find_elements(By.CLASS_NAME, "Product-tag")[1].text
         return brand
 
     def extract_item_product(self) -> str:
-        # product = self.driver.find_element(By.CLASS_NAME, "ProductsListItem-title").text
         product = self.driver.find_element(By.CLASS_NAME, "Product-title").text
         return product
 
     def extract_item_price(self) -> str:
-        # price = self.driver.find_element(By.CLASS_NAME, "ProductsListItem-price").text
         price = self.driver.find_element(By.CLASS_NAME, "Product-price").text
         return price
 
@@ -83,7 +71,7 @@ class Crawling:
         # self.scroll()
         item_links = self.extract_item_links()
         item_infos = self.extract_item_infos(item_links)
-        print(item_infos)
+        print(item_infos) # debug
         return item_infos
 
     def stop(self):

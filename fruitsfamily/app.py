@@ -14,7 +14,6 @@ class Application:
             fruits_db = FruitsDB()
             try:
                 self.datas = crawling.crawl()
-                # display()
             except:
                 ConsoleWriter.print_error()
             finally:
