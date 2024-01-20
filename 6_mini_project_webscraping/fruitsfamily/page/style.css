@@ -5,6 +5,9 @@
   --color3: rgba(0, 0, 0, 0.1);
   /* --colorP: #55608f; */
   --colorP: #4942e4;
+  --colorP1: #11009e;
+  --colorP2: #040031;
+  --colorP3: #fae7f3;
 }
 * {
   color: var(--color0);
@@ -13,8 +16,9 @@ html,
 body {
   height: 100%;
   /* background: linear-gradient(45deg, #49a09d, #5f2c82); */
-  background: linear-gradient(0deg, #fae7f3, #11009e);
+  background: linear-gradient(0deg, var(--colorP2), var(--colorP1));
   font-family: sans-serif;
+  overflow: scroll;
 }
 .header {
   display: flex;
@@ -23,6 +27,25 @@ body {
 }
 h3 {
   color: var(--color0);
+}
+.graph-fold {
+  background-color: var(--colorP);
+  color: var(--color6);
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 0 0 3px var(--color3);
+  padding: 7px 10px;
+  margin-bottom: 15px;
+}
+.graph-none {
+  display: none;
+}
+.graph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 form {
   display: flex;
@@ -138,11 +161,13 @@ a:visited {
 .footer {
   display: flex;
   justify-content: space-between;
+  /* position: fixed; */
+  bottom: 20px;
 }
 .pagination-nav {
   display: flex;
-  justify-content: left;
-  align-items: center;
+  justify-content: center;
+  align-items: left;
 }
 .pagination {
   border-radius: 7px;
