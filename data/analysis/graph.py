@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # import sys
 
 # sys.path.append(r'fruitsfamily/analysis/db_analysis.py')
-from fruitsfamily.data.analysis.db_analysis import DBAnalysis
+from data.analysis.db_analysis import DBAnalysis
 # import matplotlib.font_manager as fm
 
 
