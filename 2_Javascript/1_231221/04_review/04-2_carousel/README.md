@@ -1,1 +1,0 @@
-![04-2_캐러셀](https://github.com/ysolarh/OZ_class_backend/assets/109467066/a8a48bf1-ee27-4e98-8f19-10e25283d4bc)

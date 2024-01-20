@@ -1,1 +1,0 @@
-<img width="716" alt="02_snowman" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/50733405-660d-4fa2-8cbb-7f9e64a80bcc">

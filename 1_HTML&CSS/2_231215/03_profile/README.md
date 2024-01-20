@@ -1,1 +1,0 @@
-![03_profile](https://github.com/ysolarh/OZ_class_backend/assets/109467066/eba86c7c-6660-472e-b9cc-14f74a752fbd)
