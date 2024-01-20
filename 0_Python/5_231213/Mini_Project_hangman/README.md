@@ -1,0 +1,1 @@
+https://github.com/ysolarh/OZ_class_backend/releases/tag/mini_project

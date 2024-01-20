@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미스테리 숫자 맞추기</title>
+    <link rel="stylesheet" href="231222_03-4_mystery_number.css" />
+  </head>
+  <body>
+    <div class="container flex">
+      <h1 class="title">Mystery Number 맞추기</h1>
+      <p class="description">1부터 100 사이의 숫자를 입력하세요!</p>
+      <div class="form__box">
+        <form
+          id="input__form flex"
+          onsubmit="return clickBtn();"
+          onreset="clickReset()"
+        >
+          <div class="input__submit">
+            <input class="input__num" name="input__num" type="number" />
+            <button class="input__btn" name="input__btn" type="submit">
+              뚜둥!
+            </button>
+          </div>
+          <button class="retry__btn" name="retry__btn" type="reset">
+            다시하기
+          </button>
+        </form>
+        <div>
+          <p class="hint">힌트: 숫자가 너무 작아요! 조금 더 높여보세요!</p>
+          <p class="hint">힌트: 숫자가 커요! 줄여볼까요?</p>
+          <p class="hint">힌트: 범위 안의 숫자만 입력하세요!</p>
+        </div>
+      </div>
+    </div>
+    <script src="231222_03-4_mystery_number.js"></script>
+  </body>
+</html>

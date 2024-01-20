@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    color: #152747;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: #c6d3ff;
+}
+.title__bar {
+    height: 165px;
+}
+.day {
+    border: 2px solid #152747;
+    border-radius: 10px;
+    background-color: #e6ecfc;
+    width: 290px;
+    text-align: left;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    float: left;
+}
+.date {
+    text-align: center;
+}
+.dayinfo {
+    display: inline-block;
+    text-align: right;
+    margin-top: 0px;
+}
+#title {
+    width: calc(100% - 310px);
+    text-align: center;
+    font-size: 37px;
+    margin-top: 90px;
+    float: right;
+}
+hr {
+    clear: both;
+    border: 3px dashed #152747;
+}
+.content {
+    /* padding: 50px 150px; */
+    height: calc(100% - 160px);
+    margin: 10vh 15vw;
+}
+.intro_reality {
+    height: 45vh;
+}
+.image {
+    /* width: 300px; */
+    width: 30vw;
+    margin-right: 30px;
+    float: left;
+}
+.image img {
+    width: 30vw;
+}
+.introduce {
+    width: calc(100% - 35vw);
+    height: calc(100% - 10vh);
+    float: right;
+    overflow: scroll;
+}
+.comment {
+    clear: both;
+    text-align: left;
+    border: 2px solid #152747;
+    border-radius: 10px;
+    width: 100%;
+    height: 17vh;
+    padding: 3vw;
+    background-color: #e6ecfc;
+    font-size: 17px;
+}

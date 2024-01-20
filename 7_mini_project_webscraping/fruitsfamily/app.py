@@ -1,5 +1,5 @@
-from data.collecting.crawling import Crawling
-from data.database.db_save import FruitsDB
+from fruitsfamily.data.collecting.crawling import Crawling
+from fruitsfamily.data.database.db_save import FruitsDB
 
 
 # from analysis.graph import ShowGraph

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+  <title>HTML을 이용해서 설문조사 양식 만들기</title>
+</head>
+<body>
+   <header>
+     <h1>설문조사 양식</h1>
+     <p>
+      모든 항목에 빠짐없이 체크해도 되고 안해도 됨.
+     </p>
+   </header>
+   <hr>
+   <main>
+     <form>
+      <fieldset>
+        <legend>개인정보</legend>
+        <label for="name">이름</label>
+        <input id="name" type="text" name="name">
+        <br><br>
+        <label for="phone">핸드폰번호</label>
+        <input id="phone" type="tel" name="phone">
+      </fieldset>
+      <fieldset>
+        <legend>설문</legend>
+        <p>오늘 저녁 메뉴는?</p>
+        <input id="pizza" type="radio" name="menu">
+        <label for="pizza">피자</label>
+        <input id="chicken" type="radio" name="menu">
+        <label for="chicken">치킨</label>
+        <input id="pasta" type="radio" name="menu">
+        <label for="pasta">파스타</label>
+        <input id="Jjajangmyeon" type="radio" name="menu">
+        <label for="Jjajangmyeon">짜장면</label>
+        <input id="Tteokbokki" type="radio" name="menu">
+        <label for="Tteokbokki">떡볶이</label>
+        <input id="other" type="radio" name="menu">
+        <label for="other">그 외</label>
+        <hr>
+        <p>하루동안 식사 언제?</p>
+        <input id="breakfast" type="checkbox" name="meal">
+        <label for="breakfast">아침</label>
+        <input id="lunch" type="checkbox" name="meal">
+        <label for="lunch">점심</label>
+        <input id="dinner" type="checkbox" name="meal">
+        <label for="dinner">저녁</label>
+        <input id="night" type="checkbox" name="meal">
+        <label for="night">야식</label>
+      </fieldset>
+      <fieldset>
+        <legend>기타 의견</legend>
+        <textarea name="comment" id="comment" cols="30" rows="3"></textarea>
+      </fieldset>
+      <input type="submit">
+     </form>
+   </main>
+   <hr>
+   <footer>
+     <p>
+      입력하느라 수고하셨습니다.
+     </p>
+   </footer>
+</body>
+</html>

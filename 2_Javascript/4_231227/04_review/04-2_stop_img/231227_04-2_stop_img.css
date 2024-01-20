@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 500px;
+  display: none;
+}
+button {
+  width: 500px;
+  height: 300px;
+  font-size: 100px;
+  border-radius: 50px;
+  background-color: #bd045b;
+  color: white;
+  cursor: pointer;
+}
+button.display {
+  display: none;
+}
+button:active {
+  transform: scale(1.1);
+}
+img.on {
+  display: inline-block;
+}

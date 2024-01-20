@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="231221_04-3_get_signup_form.css">
+</head>
+<body>
+  <div class="signup">
+    <h1 class="title">회원가입</h1>
+    <form id ="signup-form" class="signup-form">
+      <input id="email" class="user_info email" type="email" name="email" placeholder="이메일을 입력하세요."><br>
+      <input class="user_info" type="text" name="name" placeholder="이름을 입력하세요."><br>
+      <input class="user_info password" type="password" name="password" placeholder="비밀번호를 입력하세요."><br>
+      <input class="user_info password" type="password" name="password2" placeholder="비밀번호를 다시 입력하세요."><br>
+      <div class="phone-box">
+        <input class="user_info phone" type="tel" name="phone" placeholder="010"> -
+        <input class="user_info phone" type="tel" name="phone" placeholder="1234"> -
+        <input class="user_info phone" type="tel" name="phone" placeholder="5678">
+      </div>
+      <br>
+      <select class="user-info location" name="location">
+        <option value="none" selected>-지역을 선택하세요-</option>
+        <option value="경기">경기</option>
+        <option value="강원">강원</option>
+        <option value="충북">충북</option>
+        <option value="충남">충남</option>
+        <option value="전북">전북</option>
+        <option value="전남">전남</option>
+        <option value="경북">경북</option>
+        <option value="경남">경남</option>
+        <option value="광주">광주</option>
+        <option value="대전">대전</option>
+        <option value="인천">인천</option>
+        <option value="부산">부산</option>
+        <option value="대구">대구</option>
+        <option value="울산">울산</option>
+        <option value="제주">제주</option>
+        <option value="서울">서울</option>
+      </select>
+      <br>
+      <label class="gender" for="woman">
+        <input type="radio" name="gender">여성
+      </label>
+      <label class="gender" for="man">
+        <input type="radio" name="gender">남성
+      </label>
+      <br>
+      <input class="sign-button" type="submit" value="가입하기">
+    </form>
+  </div>
+
+  <script src="231221_04-3_get_signup_form.js"></script>
+</body>
+</html>

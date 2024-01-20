@@ -1,0 +1,58 @@
+*{
+    text-align: center;
+    font-family: 'Sunflower', sans-serif;
+}
+
+html{
+    background-color: #15356d;
+    color: #f3f3f3;
+}
+
+h1, .picture, .jujeori {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+h2 {
+    font-size: 3vw;
+}
+
+h3 {
+    font-size: 2.5vw;
+}
+
+.jujeori {
+    font-size: 2vw;
+}
+
+.honeytip {
+    border-radius: 0.5rem;
+}
+
+.mac_app, li {
+    text-align: left;
+    font-size: 2vw;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+.content {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 50%;
+}
+
+#picture {
+    width: 35vw;
+    border-radius: 0.5rem;
+}
+
+#myterm {
+    width: 50vw;
+    border-radius: 0.3rem;
+}

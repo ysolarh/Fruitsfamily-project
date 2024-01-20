@@ -1,0 +1,47 @@
+.info {
+  width: 100%;
+  height: 21rem;
+  background-color: #fe965c;
+}
+.info__text {
+  max-width: 48rem;
+  margin: auto;
+  padding: 3.7rem 1rem 0;
+}
+.info__text h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 3.2rem;
+}
+.info__text p {
+  margin: 0.5rem 0 0;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+.info__upload {
+  width: 4.4063rem;
+  height: 2rem;
+  margin-top: 1rem;
+  background-color: #8e2e17;
+  color: white;
+  border: none;
+  font-size: 0.75rem;
+  line-height: 2rem;
+  border-radius: 0.3125rem;
+}
+@media screen and (max-width: 760px) {
+  .info {
+    height: 20.7744rem;
+  }
+  .info__text {
+    padding: 1.7rem 1rem 0;
+  }
+  .info__text h1 {
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .info__text p {
+    display: none;
+  }
+}

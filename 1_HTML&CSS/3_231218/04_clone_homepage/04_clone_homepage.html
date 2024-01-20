@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈페이지 클론하기</title>
+    <link rel="stylesheet" href="04_clone_homepage.css" />
+    <script
+      src="https://kit.fontawesome.com/e7bb2c0cba.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header__navi">
+        <div class="header__inner flex">
+          <div class="header__logo">
+            <a href="https://www.samsung.com/sec/" target="_blank">
+              <!-- <img src="https://www.samsung.com/sec/static/_images/gnb/logo-gnb.svg" alt="samsong"> -->
+              <img src="./images/logo_samsung.svg" alt="samsong" />
+            </a>
+          </div>
+          <div class="header__utility">
+            <div class="header__search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="header__cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="banner__sec">
+          <div class="banner__arrows flex">
+            <div class="banner__left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="banner__right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="banner__img">
+            <!-- <img src="https://images.samsung.com/kdp/cms_contents/324111/57619904-669e-429f-9333-ab0be404db9b.png?$ORIGIN_JPG$" class="banner__back-img"> -->
+            <img src="./images/banner.webp" class="banner__back-img" />
+            <div class="banner__text">
+              <p class="banner__title">삼닷 페스타 Holiday Sale</p>
+              <p class="banner__copy">
+                최대 40% 할인 혜택으로 2023년 인기 제품을 만나보세요!
+              </p>
+              <div class="banner__button">
+                <input
+                  type="button"
+                  value="구매 혜택 보기"
+                  class="banner__bt"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="product__sec">
+          <div class="product__navi flex">
+            <div class="product__menu">
+              <input type="button" value="HolidaySale" />
+            </div>
+            <div class="product__menu">
+              <input type="button" value="새로운 갤럭시" />
+            </div>
+            <div class="product__menu">
+              <input type="button" value="12월의 특별 혜택" />
+            </div>
+            <div class="product__menu">
+              <input type="button" value="삼닷 번개특가" />
+            </div>
+            <div class="product__menu">
+              <input type="button" value="Samsung Experience" />
+            </div>
+          </div>
+          <div class="product__board flex">
+            <div class="product__first-line flex">
+              <div class="product__first-left">
+                <!-- <img
+                  src="https://images.samsung.com/kdp/cms_contents/322100/b0dec572-f16f-4f40-a64f-c4ddbfe70f2a.png?$330_330_PNG$"
+                />
+                <img
+                  src="https://images.samsung.com/kdp/cms_contents/324113/6b6b52e4-2579-4226-955b-3034414a5f16.png?$330_330_PNG$"
+                /> -->
+                <img src="./images/board_1.webp" />
+                <img src="./images/board_2.avif" />
+              </div>
+              <div class="product__first-right">
+                <!-- <img src="https://images.samsung.com/kdp/cms_contents/324113/637b7ed2-8ade-47ed-a9bb-b85b76d0879e.png?$330_330_PNG$">
+                <img src="https://images.samsung.com/kdp/cms_contents/324113/83dc863b-205c-4a12-b0f9-b8915f37c817.png?$330_330_PNG$"> -->
+                <img src="./images/board_3.avif" />
+                <img src="./images/board_4.avif" />
+              </div>
+            </div>
+            <div class="product__second-line flex">
+              <div class="product__second-left">
+                <!-- <img src="https://images.samsung.com/kdp/cms_contents/324113/637b7ed2-8ade-47ed-a9bb-b85b76d0879e.png?$330_330_PNG$">
+                <img src="https://images.samsung.com/kdp/cms_contents/324113/83dc863b-205c-4a12-b0f9-b8915f37c817.png?$330_330_PNG$"> -->
+                <img src="./images/board_5.avif" />
+                <img src="./images/board_6.avif" />
+              </div>
+              <div class="product__second-right">
+                <!-- <img src="https://images.samsung.com/kdp/cms_contents/324113/dbf7848e-5c89-443b-873f-50fbc61e52e3.png?$330_330_PNG$">
+                <img src="https://images.samsung.com/kdp/cms_contents/324113/747609ae-1d03-41c1-903d-e9b24c3b1c45.png?$330_330_PNG$"> -->
+                <img src="./images/board_7.avif" />
+                <img src="./images/board_8.avif" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer__navi">
+        <div class="menu__bar">
+          <div class="menu-bar__inner">
+            <div class="menu__icon">
+              <i class="fa-solid fa-bars"></i>
+              <p>메뉴</p>
+            </div>
+            <div class="menu__icon">
+              <i class="fa-solid fa-truck"></i>
+              <p>배송조회</p>
+            </div>
+            <div class="menu__icon">
+              <i class="fa-solid fa-angles-up"></i>
+              <p>혜택보기</p>
+            </div>
+            <div class="menu__icon">
+              <i class="fa-regular fa-user"></i>
+              <p>나의 정보</p>
+            </div>
+            <div class="menu__icon">
+              <i class="fa-regular fa-clock"></i>
+              <p>최근 본 제품</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

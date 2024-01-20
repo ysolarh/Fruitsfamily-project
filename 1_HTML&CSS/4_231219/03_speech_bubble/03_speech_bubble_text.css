@@ -1,0 +1,52 @@
+.chat-field {
+    height: calc(100% - 90px);
+    overflow: scroll;
+}
+.chat_field__texts {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.chat_field__texts > .text {
+    background-color: #C71585;
+    border-radius: 9px;
+    padding: 13px;
+    margin: 5px 20px;
+    width: fit-content;
+    position:relative
+}
+.chat_field__texts > .text:nth-child(3n) {
+    align-self: flex-end;
+}
+.chat_field__texts > .text:nth-child(3n - 1)::after {
+    content: "";
+    border-right: 15px solid #C71585;
+    border-top: 10px solid transparent;
+    position: absolute;
+    top: 30px;
+    right: 89px;
+}
+.chat_field__texts > .text:nth-child(3n)::after {
+    content: "";
+    border-left: 15px solid #C71585;
+    border-top: 10px solid transparent;
+    position: absolute;
+    top: 30px;
+    left: 184px;
+}
+.chat_field__texts > .text:hover {
+    background-color: #FF1493;
+    padding: 15px;
+    transition: padding 100ms linear;
+}
+.chat_field__texts > .text:nth-child(3n - 1):hover::after {
+    border-right: 20px solid #FF1493;
+    border-top: 13.3px solid transparent;
+    transition: border-right, border-top 100ms linear;
+}
+.chat_field__texts > .text:nth-child(3n):hover::after {
+    border-left: 20px solid #FF1493;
+    border-top: 13.3px solid transparent;
+    transition: border-left, border-top 100ms linear;
+}

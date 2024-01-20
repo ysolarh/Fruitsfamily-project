@@ -1,5 +1,5 @@
 import sys
-from data.database.db_module import DatabaseModule
+from fruitsfamily.data.database.db_module import DatabaseModule
 
 
 class DBAnalysis:

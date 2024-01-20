@@ -1,0 +1,1 @@
+![03_speech_bubble](https://github.com/ysolarh/OZ_class_backend/assets/109467066/65b085d1-883c-4d3e-80dc-090f4602fa5a)

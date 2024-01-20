@@ -1,0 +1,1 @@
+![02_responsive_web](https://github.com/ysolarh/OZ_class_backend/assets/109467066/3a091cc9-4c2b-4915-bc25-eaa0cb3e13b1)

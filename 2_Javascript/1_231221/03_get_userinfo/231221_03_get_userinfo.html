@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사용자 정보 입력받고 출력하기</title>
+</head>
+<body>
+  <h2 id="name"></h2>
+  <p id="hobby"></p>
+  <p id="song"></p>
+  <p id="food"></p>
+
+  <script>
+    const nameElement = document.querySelector("#name");
+    nameElement.textContent = prompt("이름");
+
+    const hobbyElement = document.querySelector("#hobby");
+    let hobby = prompt("취미");
+    hobbyElement.textContent = `취미는 ${hobby}입니다!`;
+
+    const songElement = document.querySelector("#song");
+    let song = prompt("좋아하는 노래");
+    songElement.textContent = `좋아하는 노래는 ${song}입니다!`;
+
+    const foodElement = document.querySelector("#food");
+    let food = prompt("좋아하는 음식");
+    foodElement.textContent = `좋아하는 음식은 ${food}입니다!`;
+  </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<img width="957" alt="04_diary" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/5573709d-dab1-4d2c-9631-761962a28c37">

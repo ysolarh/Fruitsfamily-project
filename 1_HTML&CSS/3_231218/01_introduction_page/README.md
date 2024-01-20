@@ -1,0 +1,1 @@
+<img width="715" alt="01_introduction_page" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/cacb01c8-5cb2-46e2-88ab-7015a0bbbc99">
