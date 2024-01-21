@@ -153,7 +153,7 @@ tbody {
   }
 }
 .checked-item {
-  background-color: var(--color2);
+  background-color: var(--color1);
 }
 input[type="checkbox"] {
   transform: scale(1.5);
