@@ -103,10 +103,14 @@ form {
   background-color: var(--color2);
   color: var(--color0);
 }
+#update-btn:active,
 #search-btn:active,
 #del-btn:active {
   background-color: var(--color1);
   color: var(--color0);
+}
+#update-btn {
+  margin-left: 10px;
 }
 .main {
   position: relative;
