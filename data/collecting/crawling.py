@@ -1,4 +1,6 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
@@ -13,7 +15,8 @@ class Crawling:
                            "Chrome/120.0.0.0 Safari/537.36"}
         self.options = Options()
         self.set_options()
-        self.driver = webdriver.Chrome(options=self.options)
+        self.service = Service(ChromeDriverManager().install())
+        self.driver = webdriver.Chrome(service=self.service, options=self.options)
         self.driver.get(self.url)
 
     def set_options(self) -> None:

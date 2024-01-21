@@ -10,13 +10,14 @@
 
 -----
 ### Version Information
-|            | version   |
-|------------|-----------|
-| python     | v.3.11.5  |  
-| selenium   | v.4.16.0  |
-| pymysql    | v.1.1.0   |
-| numpy      | v.1.26.3  |
-| matplotlib | v.3.8.0   |
-| mysql      | v.8.2.0   |
-| flask      | v.2.2.5   |
+|                   | version  |
+|-------------------|----------|
+| python            | v.3.11.7 |  
+| selenium          | v.4.16.0 |
+| webdriver-manager | v.4.0.1  |
+| pymysql           | v.1.1.0  |
+| numpy             | v.1.26.3 |
+| matplotlib        | v.3.8.0  |
+| mysql             | v.8.2.0  |
+| flask             | v.3.0.1  |
 
