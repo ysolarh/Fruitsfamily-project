@@ -21,6 +21,11 @@ dateH3.innerHTML = `
   ${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}
 `;
 
+function handle_checkbox(item_id) {
+  const itemTr = document.querySelector(`.item${item_id}`);
+  itemTr.classList.toggle("checked-item");
+}
+
 // data.forEach((item) => {
 //   const row = dataTable.insertRow();
 //   row.insertCell(0).innerHTML = "<input type='checkbox'>";

@@ -23,7 +23,7 @@ class Application:
 app = Flask(__name__)
 db_module = DatabaseModule()
 cur = db_module.cur
-sql_item = "SELECT C.name AS category, B.brand_name AS brand, I.product AS product, I.price AS price, I.url AS url, I.date AS date, I.sold AS sold \
+sql_item = "SELECT I.item_id AS id, C.name AS category, B.brand_name AS brand, I.product AS product, I.price AS price, I.url AS url, I.date AS date, I.sold AS sold \
     FROM Items I \
     JOIN Categories C ON I.category_id = C.category_id \
     JOIN Brands B ON I.brand_id = B.brand_id;"
@@ -32,9 +32,6 @@ sql_category = "SELECT category_id, name FROM Categories;"
 category_data = db_module.execute_all(sql_category)
 
 
-
-# fruits_data = db_module.fetch_all()
-
 @app.route('/')
 def index():
     return render_template('index.html', data_list=fruits_data, cate_list=category_data)
@@ -42,4 +39,5 @@ def index():
 
 if __name__ == "__main__":
     Application().run()
-    app.run(debug=True)
+    app.run()
+    # app.run(debug=True) # debug
