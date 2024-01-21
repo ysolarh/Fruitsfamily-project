@@ -5,12 +5,12 @@
 3. Admin page에 보여주기  
 ----- 예정 -----  
 4. DB 통계 그래프 보여주기  
-5. 필터링, 검색, 삭제, (추가, 수정 - 고민중) 기능 추가  
+5. 필터링, 검색, 삭제, 정렬, (추가, 수정 - 고민중) 기능 추가  
 
 <a href="https://ysolarh.github.io/admin-page/" target="_blank">일단 이전에 만든 admin page 맛보기용</a>
 
-- 진행 상황
-<img width="700" alt="스크린샷 2024-01-21 오후 10 08 43" src="https://github.com/ysolarh/Fruitsfamily-project/assets/70841430/ec842ba7-325f-4b15-bca8-fdbb1ad773f6">
+- 진행 상황  
+<img width="700" alt="스크린샷 2024-01-22 오전 12 09 22" src="https://github.com/ysolarh/Fruitsfamily-project/assets/70841430/b9e65062-6227-40d9-a266-996678a5a735">
 
 -----
 ### Version Information
