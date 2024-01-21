@@ -34,3 +34,6 @@ class DatabaseModule:
         self.cur.execute(query, *args)
         rows = self.cur.fetchall()
         return rows
+
+    def fetch_all(self):
+        return self.cur.fetchall()
