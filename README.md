@@ -7,6 +7,8 @@
 4. DB 통계 그래프 보여주기  
 5. 검색, 추가, 삭제, 수정 기능 추가  
 
+- 진행 상황
+<img width="700" alt="스크린샷 2024-01-21 오후 10 08 43" src="https://github.com/ysolarh/Fruitsfamily-project/assets/70841430/ec842ba7-325f-4b15-bca8-fdbb1ad773f6">
 
 -----
 ### Version Information
