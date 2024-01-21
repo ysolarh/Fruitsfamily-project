@@ -1,6 +1,6 @@
 from data.collecting.crawling import Crawling
 from data.database.db_save import FruitsDB
-
+from flask import Flask, render_template
 
 # from analysis.graph import ShowGraph
 
@@ -17,6 +17,12 @@ class Application:
             fruits_db.save_db(self.datas)
             # ShowGraph().show_by_category() # debug
 
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == "__main__":
     Application().run()
+    app.run(debug=True)
