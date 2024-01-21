@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
 from console.console_writer import ConsoleWriter
-from config.constants import (FRUITS_URL, SLEEP_TIME, SCROLL_PAUSE_TIME)
+from config.constants import (FRUITS_URL, SLEEP_TIME, SCROLL_PAUSE_TIME, SCROLL_TIMES)
 
 
 class Crawling:
@@ -59,7 +59,7 @@ class Crawling:
     def extract_item_infos(self, item_links: list) -> list:
         items_info = []
         # for link in item_links[:5]:  # debug
-        for link in item_links[:5]:
+        for link in item_links:
             self.driver.get(link)
             category = self.extract_item_category()
             brand = self.extract_item_brand()
@@ -95,7 +95,7 @@ class Crawling:
 
     def crawl(self) -> list:
         try:
-            self.scroll_n_times(0) # debug
+            self.scroll_n_times(SCROLL_TIMES) # debug
             item_links = self.extract_item_links()
             item_infos = self.extract_item_infos(item_links)
             print(item_infos) # debug

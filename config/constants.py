@@ -2,6 +2,7 @@ FRUITS_URL = "https://fruitsfamily.com/discover"
 
 SLEEP_TIME = 0.5
 SCROLL_PAUSE_TIME = 1
+SCROLL_TIMES = 0
 
 URL_IDX = 0
 CATE_IDX = 1
