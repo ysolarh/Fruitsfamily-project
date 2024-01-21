@@ -23,7 +23,7 @@ class Application:
 app = Flask(__name__)
 db_module = DatabaseModule()
 cur = db_module.cur
-sql = ("SELECT C.name AS category, B.brand_name AS brand, I.product AS product, I.price AS price, I.url AS url \
+sql = ("SELECT C.name AS category, B.brand_name AS brand, I.product AS product, I.price AS price, I.url AS url, I.date AS date, I.sold AS sold \
     FROM Items I \
     JOIN Categories C ON I.category_id = C.category_id \
     JOIN Brands B ON I.brand_id = B.brand_id")
