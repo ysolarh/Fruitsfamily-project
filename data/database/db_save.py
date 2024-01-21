@@ -39,6 +39,7 @@ class FruitsDB:
                 price VARCHAR(10) NOT NULL,
                 url TEXT,
                 sold BOOLEAN,
+                date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY (item_id),
                 FOREIGN KEY (category_id) REFERENCES Categories (category_id) ON DELETE CASCADE,
                 FOREIGN KEY (brand_id) REFERENCES Brands (brand_id) ON DELETE CASCADE
