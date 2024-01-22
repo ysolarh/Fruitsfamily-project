@@ -1,7 +1,7 @@
 from typing import Tuple, Any
 
 import pymysql
-from config.constants_db import (HOST, USER, PASSWORD, DB, CHARSET)
+from config.config_db import (HOST, USER, PASSWORD, DB, CHARSET)
 
 class DatabaseModule:
     def __init__(self):
