@@ -40,9 +40,9 @@ class ShowGraph:
         # plt.xticks(x, labels=categories)
         # plt.show()
 
-        m_html = mpld3.fig_to_html(self.fig, figid='graph-img')
-        with open("graph_show.html", "w") as f:
-            f.write(m_html)
+        # m_html = mpld3.fig_to_html(self.fig, figid='graph-img')
+        # with open("graph_show.html", "w") as f:
+        #     f.write(m_html)
 
 
 # print([f.name for f in fm.fontManager.ttflist])
