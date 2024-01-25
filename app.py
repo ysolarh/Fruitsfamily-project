@@ -19,19 +19,14 @@ class Application:
             fruits_db.save_db(self.datas)
             # ShowGraph().show_by_category() # debug
 
-from data.database.db_query import SQL_ALL
+
+from data.database.db_query import SQL_ALL, SQL_CATE
+
 app = Flask(__name__)
 db_module = DatabaseModule()
 cur = db_module.cur
-# sql_item = ("SELECT I.item_id AS id, C.name AS category, B.brand_name AS brand, I.product AS product, I.price AS price, I.url AS url, I.date AS date, I.sold AS sold \
-#     FROM Items I \
-#     JOIN Categories C ON I.category_id = C.category_id \
-#     JOIN Brands B ON I.brand_id = B.brand_id \
-#     ORDER BY date DESC;")
-# fruits_data = db_module.execute_all(sql_item)
 fruits_data = db_module.execute_all(SQL_ALL)
-sql_category = "SELECT category_id, name FROM Categories;"
-category_data = db_module.execute_all(sql_category)
+category_data = db_module.execute_all(SQL_CATE)
 
 
 @app.route('/')
@@ -41,5 +36,5 @@ def index():
 
 if __name__ == "__main__":
     Application().run()
-    # app.run()
+    app.run()
     # app.run(debug=True) # debug
