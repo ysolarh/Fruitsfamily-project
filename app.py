@@ -37,6 +37,6 @@ def index():
 
 
 if __name__ == "__main__":
-    # Application().run()
+    Application().run()
     app.run()
     # app.run(debug=True) # debug

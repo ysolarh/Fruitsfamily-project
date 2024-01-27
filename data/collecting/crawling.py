@@ -96,6 +96,7 @@ class Crawling:
     def crawl(self) -> list:
         try:
             self.scroll_n_times(SCROLL_TIMES) # debug
+            # self.scroll_all() # debug
             item_links = self.extract_item_links()
             item_infos = self.extract_item_infos(item_links)
             print(item_infos) # debug
