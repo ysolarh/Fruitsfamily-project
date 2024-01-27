@@ -20,12 +20,14 @@ class Application:
             # ShowGraph().show_by_category() # debug
 
 
-from data.database.db_query import SQL_ALL, SQL_CATE
+from data.database.db_query import SQL_ALL, SQL_CATE, SQL_SEARCH_BRAND, SQL_SEARCH_PRODUCT
 
 app = Flask(__name__)
 db_module = DatabaseModule()
 cur = db_module.cur
 fruits_data = db_module.execute_all(SQL_ALL)
+# fruits_data = db_module.execute_all(SQL_SEARCH_PRODUCT, "백팩")
+# fruits_data = db_module.execute_all(SQL_SEARCH_PRODUCT, "NIKE")
 category_data = db_module.execute_all(SQL_CATE)
 
 
@@ -35,6 +37,6 @@ def index():
 
 
 if __name__ == "__main__":
-    Application().run()
+    # Application().run()
     app.run()
     # app.run(debug=True) # debug
