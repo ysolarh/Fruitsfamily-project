@@ -1,8 +1,8 @@
 import plotly.express as px
 
-import sys # debug
+# import sys # debug
 
-sys.path.append(r'/Users/yyy/Documents/OZ_project/fruitsfamily/') # debug
+# sys.path.append(r'/Users/yyy/Documents/OZ_project/fruitsfamily/') # debug
 
 from data.analysis.db_analysis import DBAnalysis
 
@@ -30,7 +30,7 @@ class ShowGraph:
         fig = px.bar(x=x, y=y)
         fig.show()
 
-    def put_graph_in_html(self):
+    # def put_graph_in_html(self):
 
 
-ShowGraph().show_graph()  # debug
+ShowGraph().show_bar_graph()  # debug
