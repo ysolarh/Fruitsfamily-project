@@ -30,7 +30,7 @@ h3 {
 }
 .graph-fold {
   background-color: var(--colorP);
-  color: var(--color6);
+  color: var(--color0);
   border: none;
   border-radius: 7px;
   box-shadow: 0 0 0 3px var(--color3);
