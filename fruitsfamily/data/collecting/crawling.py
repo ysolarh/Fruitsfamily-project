@@ -4,8 +4,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
-from console.console_writer import ConsoleWriter
-from config.constants import (FRUITS_URL, SLEEP_TIME, SCROLL_PAUSE_TIME, SCROLL_TIMES)
+from fruitsfamily.console.console_writer import ConsoleWriter
+from fruitsfamily.configs.constants import (FRUITS_URL, SLEEP_TIME, SCROLL_PAUSE_TIME, SCROLL_TIMES)
 
 
 class Crawling:
