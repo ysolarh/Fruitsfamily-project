@@ -3,7 +3,7 @@
 1. 사이트에서 상품 정보 크롤링  
 2. DB에 저장  
 3. Admin page에 보여주기  
------ 예정 -----  
+   ----- 예정 -----
 4. DB 통계 그래프 보여주기  
 5. 필터링, 검색, 삭제, 정렬, (추가, 수정 - 고민중) 기능 추가  
 
@@ -11,6 +11,9 @@
 
 - 진행 상황  
 <img width="700" alt="스크린샷 2024-01-22 오전 12 09 22" src="https://github.com/ysolarh/Fruitsfamily-project/assets/70841430/b9e65062-6227-40d9-a266-996678a5a735">
+<img width="325" alt="graph0" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/aad0df35-779a-49ff-822c-ff634252896f"> &nbsp;
+<img width="325" alt="graph1" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/41b4460a-48fc-4611-85dc-ab691fe0544a">
+
 
 -----
 ### Version Information
