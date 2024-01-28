@@ -11,8 +11,8 @@
 
 - 진행 상황  
 <img width="700" alt="스크린샷 2024-01-22 오전 12 09 22" src="https://github.com/ysolarh/Fruitsfamily-project/assets/70841430/b9e65062-6227-40d9-a266-996678a5a735">
-<img width="325" alt="graph0" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/aad0df35-779a-49ff-822c-ff634252896f"> &nbsp;
-<img width="325" alt="graph1" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/41b4460a-48fc-4611-85dc-ab691fe0544a">
+<img width="330" alt="graph0" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/aad0df35-779a-49ff-822c-ff634252896f"> &nbsp;
+<img width="330" alt="graph1" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/41b4460a-48fc-4611-85dc-ab691fe0544a">
 
 
 -----
