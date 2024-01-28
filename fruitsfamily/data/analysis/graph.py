@@ -1,13 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
-import sys
-
-sys.path.append(r'//')
-
 from fruitsfamily.data.analysis.db_analysis import DBAnalysis
 
-
+# import sys
+#
+# sys.path.append(r'//')
 # import matplotlib.font_manager as fm
 
 

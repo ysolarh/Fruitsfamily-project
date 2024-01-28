@@ -1,7 +1,7 @@
+from flask import Flask
 from fruitsfamily.data.collecting.crawling import Crawling
 from fruitsfamily.data.database.db_save import FruitsDB
-from flask import Flask
-import config
+from fruitsfamily.configs import config
 
 
 class Application:

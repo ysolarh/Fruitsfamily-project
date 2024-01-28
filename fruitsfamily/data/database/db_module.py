@@ -1,5 +1,3 @@
-from typing import Tuple, Any
-
 import pymysql
 from fruitsfamily.configs.config_db import (HOST, USER, PASSWORD, DB, CHARSET)
 

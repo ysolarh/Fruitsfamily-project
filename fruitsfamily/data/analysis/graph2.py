@@ -1,13 +1,10 @@
 import plotly.express as px
-
-# import sys # debug
-
-# sys.path.append(r'/Users/yyy/Documents/OZ_project/fruitsfamily/') # debug
-
 from fruitsfamily.data.analysis.db_analysis import DBAnalysis
 
-
 # import matplotlib.font_manager as fm
+# import sys # debug
+# sys.path.append(r'/Users/yyy/Documents/OZ_project/fruitsfamily/') # debug
+
 
 
 class ShowGraph:
