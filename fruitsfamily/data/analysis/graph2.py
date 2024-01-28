@@ -4,7 +4,7 @@ import plotly.express as px
 
 # sys.path.append(r'/Users/yyy/Documents/OZ_project/fruitsfamily/') # debug
 
-from data.analysis.db_analysis import DBAnalysis
+from fruitsfamily.data.analysis.db_analysis import DBAnalysis
 
 
 # import matplotlib.font_manager as fm

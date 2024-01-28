@@ -1,8 +1,7 @@
-import pymysql
 from pymysql import IntegrityError
-from console.console_writer import ConsoleWriter
-from data.database.db_module import DatabaseModule
-from config.constants import (URL_IDX, CATE_IDX, BRAND_IDX, PROD_IDX, PRICE_IDX, SOLD_IDX)
+from fruitsfamily.console.console_writer import ConsoleWriter
+from fruitsfamily.data.database.db_module import DatabaseModule
+from fruitsfamily.configs.constants import (URL_IDX, CATE_IDX, BRAND_IDX, PROD_IDX, PRICE_IDX, SOLD_IDX)
 
 
 class FruitsDB:

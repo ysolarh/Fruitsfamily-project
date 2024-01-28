@@ -1,12 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import mpld3
 
 import sys
 
-sys.path.append(r'/Users/yyy/Documents/OZ_project/fruitsfamily/')
+sys.path.append(r'//')
 
-from data.analysis.db_analysis import DBAnalysis
+from fruitsfamily.data.analysis.db_analysis import DBAnalysis
 
 
 # import matplotlib.font_manager as fm
