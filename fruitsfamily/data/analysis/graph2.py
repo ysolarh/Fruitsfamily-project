@@ -33,4 +33,4 @@ class ShowGraph:
     # def put_graph_in_html(self):
 
 
-ShowGraph().show_bar_graph()  # debug
+# ShowGraph().show_bar_graph()  # debug

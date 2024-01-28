@@ -1,10 +1,8 @@
-from data.collecting.crawling import Crawling
-from data.database.db_save import FruitsDB
+from fruitsfamily.data.collecting.crawling import Crawling
+from fruitsfamily.data.database.db_save import FruitsDB
 from flask import Flask
 import config
 
-
-from fruitsfamily.data.analysis.graph import ShowGraph
 
 class Application:
     def __init__(self):
@@ -17,8 +15,6 @@ class Application:
             fruits_db = FruitsDB()
             self.datas = crawling.crawl()
             fruits_db.save_db(self.datas)
-            # ShowGraph().show_by_category() # debug
-
 
 def create_app():
     app = Flask(__name__)

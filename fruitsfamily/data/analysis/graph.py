@@ -45,4 +45,4 @@ class ShowGraph:
 
 
 # print([f.name for f in fm.fontManager.ttflist])
-ShowGraph().show_by_category()  # debug
+# ShowGraph().show_by_category()  # debug
