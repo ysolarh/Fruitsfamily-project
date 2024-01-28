@@ -1,4 +1,6 @@
 from flask import Flask
+
+from fruitsfamily.data.analysis.graph2 import ShowGraph
 from fruitsfamily.data.collecting.crawling import Crawling
 from fruitsfamily.data.database.db_save import FruitsDB
 from fruitsfamily.configs import config
@@ -31,3 +33,5 @@ def create_app():
 #     Application().run() # update할때 작동시킬것
 # app.run()
 # app.run(debug=True) # debug
+
+ShowGraph().show_bar_graph()  # debug

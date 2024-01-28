@@ -25,6 +25,7 @@
 | plotly            | v.5.18.0 |
 | pandas            | v.2.2.0  |
 | jinja2            | v.3.1.3  |
+| kaleido           | v.0.2.1  |
 | ~~numpy~~         | v.1.26.3 |
 | ~~matplotlib~~    | v.3.8.0  |
 | ~~mpld3~~         | v.0.5.10 |

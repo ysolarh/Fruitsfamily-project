@@ -1,6 +1,6 @@
 .carousel-wrapper {
-  width: 500px;
-  height: 325px;
+  width: 750px;
+  height: 500px;
   overflow: hidden;
   margin: 20px auto 10px;
   border: 2px solid var(--color0);
@@ -19,8 +19,8 @@
   transition: transform 0.2s;
 }
 .carousel > .image {
-  width: 500px;
-  height: 325px;
+  width: 750px;
+  height: 500px;
 }
 .carousel > .image > .number {
   margin: 5px 30px;
@@ -34,8 +34,8 @@
   color: white;
 }
 .carousel > .image > img {
-  width: 500px;
-  height: 325px;
+  width: 750px;
+  height: 500px;
   object-fit: cover;
 }
 .buttons {
