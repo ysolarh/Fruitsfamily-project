@@ -16,6 +16,7 @@ class Application:
             self.datas = crawling.crawl()
             fruits_db.save_db(self.datas)
 
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(config)
@@ -25,7 +26,8 @@ def create_app():
 
     return app
 
+
 # if __name__ == "__main__":
-#     Application().run()
+#     Application().run() # update할때 작동시킬것
 # app.run()
 # app.run(debug=True) # debug

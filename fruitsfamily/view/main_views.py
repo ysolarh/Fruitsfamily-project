@@ -1,5 +1,4 @@
-from flask import Blueprint
-from flask import render_template
+from flask import Blueprint, render_template
 from fruitsfamily.data.database.db_module import DatabaseModule
 from fruitsfamily.data.database.db_query import SQL_ALL, SQL_CATE
 
