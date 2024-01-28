@@ -1,6 +1,6 @@
 .carousel-wrapper {
   width: 750px;
-  height: 500px;
+  height: 550px;
   overflow: hidden;
   margin: 20px auto 10px;
   border: 2px solid var(--color0);
@@ -20,7 +20,7 @@
 }
 .carousel > .image {
   width: 750px;
-  height: 500px;
+  height: 550px;
 }
 .carousel > .image > .number {
   margin: 5px 30px;
@@ -35,7 +35,7 @@
 }
 .carousel > .image > img {
   width: 750px;
-  height: 500px;
+  height: 550px;
   object-fit: cover;
 }
 .buttons {
@@ -43,10 +43,13 @@
 }
 .buttons > button {
   background-color: var(--colorP);
-  color: var(--color6);
+  color: var(--color0);
   border: none;
   border-radius: 7px;
   box-shadow: 0 0 0 3px var(--color3);
   padding: 7px 10px;
   margin-bottom: 10px;
+}
+.buttons > button:active {
+  transform: scale(1.1);
 }

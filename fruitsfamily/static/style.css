@@ -37,6 +37,9 @@ h3 {
   padding: 7px 10px;
   margin-bottom: 15px;
 }
+.graph-fold:active {
+  transform: scale(1.1);
+}
 .graph-none {
   display: none;
 }
@@ -108,6 +111,7 @@ form {
 #del-btn:active {
   background-color: var(--color1);
   color: var(--color0);
+  transform: scale(1.1);
 }
 #update-btn {
   margin-left: 10px;
