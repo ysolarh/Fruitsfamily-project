@@ -31,7 +31,9 @@ def create_app():
 
 # if __name__ == "__main__":
 #     Application().run() # update할때 작동시킬것
+#     ShowGraph().show_bar_graph()  # debug
 # app.run()
 # app.run(debug=True) # debug
 
-ShowGraph().show_bar_graph()  # debug
+ShowGraph().get_graph_by_category()  # debug
+ShowGraph().get_graph_by_price()  # debug

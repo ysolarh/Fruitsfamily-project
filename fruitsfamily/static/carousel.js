@@ -3,7 +3,7 @@ const carousel = document.querySelector(".carousel");
 const numList = document.querySelectorAll(".number");
 
 let idx = 0;
-const maxIdx = 2;
+const maxIdx = 1;
 
 // function darkmode() {
 //     body.classList.toggle("active");
@@ -13,7 +13,7 @@ const maxIdx = 2;
 // }
 
 function switchImage(idx) {
-  carousel.style.transform = `translate3d(-${500 * idx}px, 0, 0)`;
+  carousel.style.transform = `translate3d(-${750 * idx}px, 0, 0)`;
 }
 
 function clickPrev() {

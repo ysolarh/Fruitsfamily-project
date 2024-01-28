@@ -29,28 +29,24 @@
               <div class="carousel-wrapper">
                 <div class="carousel">
                   <div class="image">
-                    <p class="number">1</p>
-                    <img src="{{ url_for('static', filename='images/bar.png') }}" />
+                    <p class="number">카테고리별 상품 개수</p>
+                    <img src="{{ url_for('static', filename='images/category_bar.png') }}" />
 <!--                    <img-->
 <!--                      src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2ZsMjM0MTcwNjg4MTItaW1hZ2Uta3FhcDlyZHcuanBn.jpg"-->
 <!--                    />-->
                   </div>
                   <div class="image">
-                    <p class="number">2</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/24701-nature-natural-beauty.jpg" />
-                  </div>
-                  <div class="image">
-                    <p class="number">3</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Big_Nature_%28155420955%29.jpeg" />
+                    <p class="number">가격대별 상품 개수</p>
+                    <img src="{{ url_for('static', filename='images/price_bar.png') }}" />
+<!--                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/24701-nature-natural-beauty.jpg" />-->
                   </div>
                 </div>
               </div>
               <div class="buttons">
                 <!-- <button id="dark" onclick="darkmode();">&#9679;</button> -->
                 <button id="prev" onclick="clickPrev()">prev</button>
-                <button id="one" onclick="clickButton(1)">1</button>
-                <button id="two" onclick="clickButton(2)">2</button>
-                <button id="three" onclick="clickButton(3)">3</button>
+                <button id="one" onclick="clickButton(1)">카테고리별</button>
+                <button id="two" onclick="clickButton(2)">가격대별</button>
                 <button id="next" onclick="clickNext()">next</button>
               </div>
             </div>
