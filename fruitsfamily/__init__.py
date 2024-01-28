@@ -29,11 +29,10 @@ def create_app():
     return app
 
 
-# if __name__ == "__main__":
-#     Application().run() # update할때 작동시킬것
-#     ShowGraph().show_bar_graph()  # debug
+if __name__ == "__main__":
+    Application().run() # update할때 작동시킬것
+    ShowGraph().get_graph_by_category()  # debug
+    ShowGraph().get_graph_by_price()  # debug
 # app.run()
 # app.run(debug=True) # debug
 
-ShowGraph().get_graph_by_category()  # debug
-ShowGraph().get_graph_by_price()  # debug
