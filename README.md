@@ -22,14 +22,14 @@
 |                   | version      |
 |-------------------|--------------|
 | python            | v.3.11.7     |  
-| flask             | v.3.0.1      |
-| jinja2            | v.3.1.3      |
 | mysql             | v.8.2.0      |
-| pymysql           | v.1.1.0      |
+| flask             | v.3.0.1      |
 | selenium          | v.4.16.0     |
 | webdriver-manager | v.4.0.1      |
+| pymysql           | v.1.1.0      |
 | plotly            | v.5.18.0     |
 | pandas            | v.2.2.0      |
+| jinja2            | v.3.1.3      |
 | kaleido           | v.0.2.1      |
 | ~~numpy~~         | ~~v.1.26.3~~ |
 | ~~matplotlib~~    | ~~v.3.8.0~~  |
