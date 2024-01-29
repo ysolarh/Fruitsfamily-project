@@ -11,7 +11,7 @@ class Application:
         self.__running = True
         self.datas = []
 
-    def run(self):
+    def run(self) -> None:
         if self.__running:
             crawling = Crawling()
             fruits_db = FruitsDB()
@@ -19,7 +19,7 @@ class Application:
             fruits_db.save_db(self.datas)
 
 
-def create_app():
+def create_app() -> Flask:
     app = Flask(__name__)
     app.config.from_object(config)
 

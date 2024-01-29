@@ -37,7 +37,7 @@ class FruitsDB:
                 product VARCHAR(100) NOT NULL UNIQUE,
                 price VARCHAR(10) NOT NULL,
                 url TEXT,
-                sold BOOLEAN,
+                sold TINYINT,
                 date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY (item_id),
                 FOREIGN KEY (category_id) REFERENCES Categories (category_id) ON DELETE CASCADE,

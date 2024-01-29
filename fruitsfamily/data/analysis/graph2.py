@@ -48,7 +48,6 @@ class ShowGraph:
     def save_graph(self, title) -> None:
         self.fig.write_image(FileUtils.find_by_path(GRAPH_DIR) + f"/{title}.png")
 
-    # def put_graph_in_html(self):
 
 # ShowGraph().get_graph_by_category()  # debug
 # ShowGraph().get_graph_by_price()  # debug
