@@ -37,8 +37,8 @@
       </div>
     </section>
     <section class="form-section">
-      <form class="form">
-        <div class="form-search">
+      <div class="form-search">
+        <form class="form" method="get">
           <div class="category">
             <select class="form-select">
               <option selected>카테고리</option>
@@ -51,16 +51,22 @@
               <option value="accessory">패션잡화</option> -->
             </select>
           </div>
+        </form>
+        <form class="form" method="get">
           <div class="search">
-            <input type="text" class="form-input" placeholder="브랜드나 상품명 입력" />
+            <input name="keyword" type="text" class="form-input" placeholder="브랜드나 상품명 입력" value="{{ keyword }}"/>
           </div>
           <div class="search-btn">
-            <button type="button" id="search-btn" class="btn btn-info form-btn">검색</button>
+            <button type="submit" id="search-btn" class="btn btn-info form-btn" onclick="window.location.href='/search'">검색</button>
           </div>
+        </form>
+        <form class="form" method="get">
           <div class="update-btn">
-            <button type="button" id="update-btn" class="btn btn-info form-btn">업데이트</button>
+            <button type="button" id="update-btn" class="btn btn-info form-btn" onclick="window.location.href='/update'">업데이트</button>
           </div>
-        </div>
+        </form>
+      </div>
+      <form class="form" method="get">
         <div class="del-btn">
           <button type="button" id="del-btn" class="btn btn-info del-btn">삭제</button>
         </div>
