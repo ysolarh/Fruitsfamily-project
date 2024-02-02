@@ -9,9 +9,11 @@
 
 <a href="https://ysolarh.github.io/admin-page/" target="_blank">일단 이전에 만든 admin page 맛보기용</a>
 
-<img width="700" alt="스크린샷 2024-01-22 오전 12 09 22" src="https://github.com/ysolarh/Fruitsfamily-project/assets/70841430/b9e65062-6227-40d9-a266-996678a5a735">
-<img width="347" alt="graph0" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/aad0df35-779a-49ff-822c-ff634252896f"> &nbsp;
-<img width="347" alt="graph1" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/41b4460a-48fc-4611-85dc-ab691fe0544a">
+<img width="500" alt="스크린샷 2024-01-22 오전 12 09 22" src="https://github.com/ysolarh/Fruitsfamily-project/assets/70841430/b9e65062-6227-40d9-a266-996678a5a735">
+<img width="500" alt="screen" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/9bdc4ac9-ab6b-40cc-9748-d8cb36946577">
+
+<img width="500" alt="graph0" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/aad0df35-779a-49ff-822c-ff634252896f"> &nbsp;
+<img width="500" alt="graph1" src="https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/41b4460a-48fc-4611-85dc-ab691fe0544a">
 
 - Fruitsfamily Database ERD
 ![FruitsfamilyDB](https://github.com/ysolarh/Fruitsfamily-project/assets/109467066/2f3ba611-601d-4c05-a52e-60387f7359e5)
